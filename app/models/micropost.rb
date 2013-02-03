@@ -30,7 +30,7 @@ class Micropost < ActiveRecord::Base
   def in_reply_to_username_match
     in_reply_to_username = Micropost.parse_reply_to_username_from_content(self.content)
     if !in_reply_to_username.nil? && in_reply_to.nil?
-      errors[:base] << "User #{in_reply_to_username} does not exist!"
+     
     end
   end
 
